@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Record Management</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="heading">Manage Your Records</h1>
+
+        <div class="form-area">
+            <div class="input-group">
+                <input type="text" id="studentName" placeholder="Enter Student Name" required />
+            </div>
+            <div class="input-group">
+                <input type="text" id="studentDetails" placeholder="Enter Details" required />
+            </div>
+            <div class="input-group">
+                <button id="addRecordButton" onclick="addRecord()">Add Record</button>
+                <button id="updateRecordButton" onclick="updateRecord()" style="display: none">Update Record</button>
+            </div>
+        </div>
+
+        <div class="search-area">
+            <input type="text" id="searchInput" placeholder="Search by name" onkeyup="searchRecords()" />
+            <button id="searchButton" onclick="searchRecords()">Search</button>
+        </div>
+
+        <h2 class="sub-heading">Stored Records:</h2>
+        <table class="records-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Details</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="recordList"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
